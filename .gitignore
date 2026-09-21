@@ -1,0 +1,18 @@
+# Word documents (includes ~$ temp lock files)
+*.docx
+*.doc
+~$*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependencies and env (for later, if converted to React)
+node_modules/
+.env
+.env.*
+
+# Editor / local tool settings
+.vscode/
+.claude/

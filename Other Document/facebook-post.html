@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1080px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(160deg, #0f172a 0%, #132a4a 45%, #0d5f56 100%);
+    overflow: hidden;
+  }
+
+  .card {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 56px 70px 46px;
+  }
+
+  .glow {
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(20,184,166,0.35) 0%, rgba(20,184,166,0) 70%);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 2;
+  }
+
+  .brand-logo {
+    height: 64px;
+  }
+
+  .brand-text {
+    font-size: 30px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.05;
+  }
+
+  .brand-text .nil { color: #60a5fa; }
+  .brand-text .veralu { color: #4ade80; }
+  .brand-text .sub {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #5eead4;
+    letter-spacing: 0.04em;
+  }
+
+  .offer-tag {
+    margin-top: 34px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 26px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    z-index: 2;
+  }
+
+  .headline {
+    margin-top: 26px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .headline .pct {
+    font-size: 150px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .headline .pct span {
+    color: #14b8a6;
+  }
+
+  .headline .everything {
+    font-size: 44px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+
+  .headline .sub {
+    margin-top: 14px;
+    font-size: 22px;
+    color: rgba(255,255,255,0.78);
+    font-weight: 500;
+  }
+
+  .price-row {
+    margin-top: 40px;
+    display: flex;
+    gap: 24px;
+    z-index: 2;
+  }
+
+  .price-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+    padding: 26px 30px;
+    width: 400px;
+    text-align: center;
+  }
+
+  .price-card h3 {
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .price-card .was {
+    color: rgba(255,255,255,0.5);
+    text-decoration: line-through;
+    font-size: 19px;
+  }
+
+  .price-card .now {
+    color: #5eead4;
+    font-size: 40px;
+    font-weight: 900;
+    margin: 4px 0;
+  }
+
+  .price-card .unit {
+    color: rgba(255,255,255,0.65);
+    font-size: 16px;
+  }
+
+  .badge-50 {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-top: 10px;
+  }
+
+  .cta-bar {
+    margin-top: auto;
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    border-top: 3px solid #14b8a6;
+    border-radius: 18px;
+    padding: 22px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+  }
+
+  .cta-bar .cta-msg {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .cta-bar .cta-contact {
+    color: #5eead4;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  .cta-bar .cta-contact span {
+    display: block;
+    color: rgba(255,255,255,0.6);
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="glow"></div>
+
+    <div class="brand">
+      <img class="brand-logo" src="../assets/logo.svg" alt="logo">
+      <div class="brand-text"><span class="nil">Nil</span> <span class="veralu">Veralu</span><span class="sub">AI Web Design</span></div>
+    </div>
+
+    <div class="offer-tag">🔥 LIMITED-TIME SPECIAL OFFER</div>
+
+    <div class="headline">
+      <div class="pct">50<span>%</span> OFF</div>
+      <div class="everything">EVERYTHING</div>
+      <div class="sub">Websites built with AI &mdash; same quality, half the price.</div>
+    </div>
+
+    <div class="price-row">
+      <div class="price-card">
+        <h3>Website Build</h3>
+        <div class="was">Rs. 9,998</div>
+        <div class="now">Rs. 4,999</div>
+        <div class="unit">one-time payment &middot; 4 pages</div>
+        <div class="badge-50">50% OFF</div>
+      </div>
+      <div class="price-card">
+        <h3>Care Plan</h3>
+        <div class="was">Rs. 1,998</div>
+        <div class="now">Rs. 999<span style="font-size:20px;">/mo</span></div>
+        <div class="unit">Bronze monthly plan</div>
+        <div class="badge-50">50% OFF</div>
+      </div>
+    </div>
+
+    <div class="cta-bar">
+      <div class="cta-msg">Ready to get started?</div>
+      <div class="cta-contact">WhatsApp +94 76 238 9579<span>nilveralu.com</span></div>
+    </div>
+  </div>
+</body>
+</html>
