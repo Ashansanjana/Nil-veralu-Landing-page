@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nil Veralu Web Design — Pricing Brochure</title>
+<style>
+  @page { size: A4; margin: 14mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #1e293b;
+    font-size: 11px;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #14b8a6;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand img { height: 46px; }
+  .brand-text { font-weight: 800; font-size: 20px; line-height: 1.1; }
+  .brand-text .nil { color: #1d4ed8; }
+  .brand-text .veralu { color: #16a34a; }
+  .brand-text .sub { display: block; font-size: 11px; font-weight: 600; color: #0d9488; }
+  .header-tag {
+    font-size: 10px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #14b8a6;
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+  h1 {
+    font-size: 15px;
+    color: #0f172a;
+    margin-bottom: 3px;
+  }
+  .lede {
+    color: #64748b;
+    font-size: 10.5px;
+    margin-bottom: 14px;
+  }
+  .cols {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .col { flex: 1; }
+  .section-title {
+    font-size: 12.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .plan {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 9px 11px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .plan.popular { border: 1.5px solid #14b8a6; }
+  .plan-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+  }
+  .plan-name { font-weight: 800; font-size: 12px; color: #0f172a; }
+  .plan-price { font-weight: 800; font-size: 12.5px; color: #0d9488; }
+  .plan-price span { font-size: 9px; font-weight: 500; color: #64748b; }
+  .badge {
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    background: #14b8a6;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .plan ul { list-style: none; }
+  .plan li {
+    font-size: 9.5px;
+    color: #334155;
+    margin-bottom: 2px;
+    padding-left: 12px;
+    position: relative;
+  }
+  .plan li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #0d9488;
+    font-size: 9px;
+  }
+  .note {
+    background: #f0fdfa;
+    border: 1px dashed #14b8a6;
+    border-radius: 8px;
+    padding: 8px 11px;
+    font-size: 9.5px;
+    color: #0f172a;
+    margin-top: 6px;
+  }
+  .note strong { color: #0d9488; }
+  .addons {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .addon {
+    flex: 1;
+    background: #0f172a;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 9.5px;
+  }
+  .addon strong { display: block; font-size: 11px; color: #5eead4; margin-bottom: 2px; }
+  .footer {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 2px solid #14b8a6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+  }
+  .footer .cta {
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .footer .contact {
+    color: #334155;
+    text-align: right;
+  }
+  .footer .contact strong { color: #0d9488; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="brand">
+      <img src="/assets/logo.svg" alt="logo">
+      <div class="brand-text"><span class="nil">Nil</span> <span class="veralu">Veralu</span><span class="sub">Web Design</span></div>
+    </div>
+    <div class="header-tag">Build Your Site for FREE with any Care Plan</div>
+  </div>
+
+  <h1>Simple, Transparent Pricing</h1>
+  <p class="lede">Monthly care plans for ongoing sites, or one-time packages to build a brand new website. All prices in LKR.</p>
+
+  <div class="cols">
+    <div class="col">
+      <div class="section-title">One-Time Website Build Packages</div>
+
+      <div class="plan">
+        <div class="plan-top"><span class="plan-name">4 Page Website</span><span class="plan-price">Rs. 4,999</span></div>
+        <ul><li>4 custom pages, mobile responsive</li><li>Contact form &amp; basic SEO</li><li>2 rounds of revisions</li></ul>
+      </div>
+
+      <div class="plan popular">
+        <span class="badge">Best Value</span>
+        <div class="plan-top"><span class="plan-name">6 Page Website</span><span class="plan-price">Rs. 6,999</span></div>
+        <ul><li>Everything in 4-Page</li><li>Social media integration</li><li>3 rounds of revisions</li></ul>
+      </div>
+
+      <div class="plan">
+        <div class="plan-top"><span class="plan-name">8 Page Website</span><span class="plan-price">Rs. 8,999</span></div>
+        <ul><li>Everything in 6-Page</li><li>Basic analytics setup</li><li>4 rounds of revisions</li></ul>
+      </div>
+
+      <div class="addons">
+        <div class="addon"><strong>Rs. 999</strong>per extra page (9+ pages)</div>
+        <div class="addon"><strong>Rs. 499/mo</strong>standalone hosting</div>
+        <div class="addon"><strong>Rs. 2,999</strong>one-off, free hosting forever</div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="section-title">Monthly Care Plans</div>
+
+      <div class="plan">
+        <div class="plan-top"><span class="plan-name">Bronze</span><span class="plan-price">Rs. 999<span>/mo</span></span></div>
+        <ul><li>4 page site free</li><li>1 content update/month</li><li>Hosting, security &amp; uptime monitoring</li></ul>
+      </div>
+
+      <div class="plan popular">
+        <span class="badge">Most Popular</span>
+        <div class="plan-top"><span class="plan-name">Silver</span><span class="plan-price">Rs. 1,999<span>/mo</span></span></div>
+        <ul><li>6 page site free</li><li>2 content updates/month</li><li>Monthly report &amp; SEO monitoring</li></ul>
+      </div>
+
+      <div class="plan">
+        <div class="plan-top"><span class="plan-name">Gold</span><span class="plan-price">Rs. 2,999<span>/mo</span></span></div>
+        <ul><li>8 page site free</li><li>3 content updates/month</li><li>Weekly backups &amp; SEO optimization</li></ul>
+      </div>
+
+      <div class="note">No charge for website development on any care plan — <strong>minimum 12 month commitment</strong>.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="cta">Ready to get started? Get in touch today.</span>
+    <span class="contact"><strong>WhatsApp:</strong> +94 76 238 9579 &nbsp;|&nbsp; <strong>nilveralu.com</strong></span>
+  </div>
+
+</body>
+</html>

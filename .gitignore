@@ -16,3 +16,6 @@ node_modules/
 # Editor / local tool settings
 .vscode/
 .claude/
+
+# Build output
+dist/
