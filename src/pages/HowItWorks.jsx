@@ -20,11 +20,6 @@ export default function HowItWorks() {
 
       <section>
         <div className="container">
-          <div className="section-header">
-            <span className="section-tag">The Process</span>
-            <h2>Setting Up Your Website in 3 Simple Steps</h2>
-            <p>From registering your address online to a fully built website, here's what's involved.</p>
-          </div>
           <div className="process-steps">
             {steps.map((step, i) => (
               <div className="process-step" key={step.title}>

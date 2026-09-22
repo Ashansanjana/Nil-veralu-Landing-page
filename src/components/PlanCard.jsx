@@ -42,10 +42,7 @@ export default function PlanCard({ plan, variant, compact = false }) {
       {plan.highlight && (
         <div className="plan-highlight">
           <Icon name="gift" size={18} />
-          <div>
-            <strong>{plan.highlight}</strong>
-            <span>avg. 2 scroll lengths per page</span>
-          </div>
+          <strong>{plan.highlight}</strong>
         </div>
       )}
 

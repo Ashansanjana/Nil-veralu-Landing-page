@@ -3,12 +3,10 @@ import usePageMeta from '../components/usePageMeta.js';
 import Icon from '../components/Icon.jsx';
 import Reveal from '../components/Reveal.jsx';
 import PlanPreview from '../components/PlanPreview.jsx';
-import WhyUs from '../components/home/WhyUs.jsx';
-import Process from '../components/home/Process.jsx';
 import Faq from '../components/Faq.jsx';
 import { WHATSAPP_URL } from '../data/site.js';
 
-const heroPoints = ['Free build with any care plan', '100% mobile responsive', 'Prices in LKR'];
+const heroPoints = ['Free build with any care plan', '100% mobile responsive', 'Custom design, no templates'];
 
 function HeroVisual() {
   return (
@@ -98,58 +96,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- Services ---------- */}
-      <section className="services">
+      {/* ---------- Pricing preview ---------- */}
+      <section className="pricing-preview">
         <div className="container">
           <Reveal className="section-header">
-            <span className="section-tag">Our Services</span>
-            <h2>Two simple ways to work with us</h2>
-            <p>Choose an ongoing monthly care plan, or a one-time website build package — or combine both.</p>
+            <span className="section-tag">Pricing</span>
+            <h2>Simple, transparent pricing</h2>
+            <p>All prices in Sri Lankan Rupees. Limited-time 50% off on every plan and package.</p>
           </Reveal>
-
-          <div className="service-grid">
-            <Reveal className="service-card service-care">
-              <div className="service-head">
-                <div className="service-icon"><Icon name="repeat" size={26} /></div>
-                <span className="service-chip">Website build included free</span>
-              </div>
-              <h3>Monthly Care Plans</h3>
-              <p>Bronze, Silver and Gold plans — hosting support, updates, monitoring and more. Your website build is included free.</p>
-              <div className="service-price">
-                <span>from</span> <strong>Rs. 999</strong> <span>/ month</span>
-              </div>
-              <ul className="service-list">
-                <li><Icon name="check" size={16} /> Free 4, 6 or 8 page website</li>
-                <li><Icon name="check" size={16} /> Hosting support &amp; uptime monitoring</li>
-                <li><Icon name="check" size={16} /> Monthly content updates</li>
-                <li><Icon name="check" size={16} /> Security monitoring &amp; support</li>
-              </ul>
-              <Link to="/pricing#care-plans" className="btn btn-primary btn-block">
-                See Care Plans <Icon name="arrow" size={18} />
-              </Link>
-            </Reveal>
-
-            <Reveal className="service-card service-build" delay={120}>
-              <div className="service-head">
-                <div className="service-icon"><Icon name="layout" size={26} /></div>
-                <span className="service-chip">One-time payment</span>
-              </div>
-              <h3>Website Build Packages</h3>
-              <p>Get a brand new website built from scratch — choose 4, 6 or 8 pages, with extra pages available anytime.</p>
-              <div className="service-price">
-                <span>from</span> <strong>Rs. 4,999</strong> <span>one-time</span>
-              </div>
-              <ul className="service-list">
-                <li><Icon name="check" size={16} /> Custom-designed pages</li>
-                <li><Icon name="check" size={16} /> Contact form &amp; basic SEO</li>
-                <li><Icon name="check" size={16} /> 2–4 rounds of revisions</li>
-                <li><Icon name="check" size={16} /> Extra pages Rs. 999 each</li>
-              </ul>
-              <Link to="/pricing#build-packages" className="btn btn-dark-outline btn-block">
-                See Build Packages <Icon name="arrow" size={18} />
-              </Link>
-            </Reveal>
-          </div>
+          <PlanPreview />
         </div>
       </section>
 
@@ -189,22 +144,6 @@ export default function Home() {
               <Icon name="coin" size={20} /> Save <strong>over Rs. 25,000</strong> on your first website
             </div>
           </Reveal>
-        </div>
-      </section>
-
-      <WhyUs />
-
-      <Process />
-
-      {/* ---------- Pricing preview ---------- */}
-      <section className="pricing-preview">
-        <div className="container">
-          <Reveal className="section-header">
-            <span className="section-tag">Pricing</span>
-            <h2>Simple, transparent pricing</h2>
-            <p>All prices in Sri Lankan Rupees. Limited-time 50% off on every plan and package.</p>
-          </Reveal>
-          <PlanPreview />
         </div>
       </section>
 

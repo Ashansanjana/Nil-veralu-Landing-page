@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import usePageMeta from '../components/usePageMeta.js';
 import Icon from '../components/Icon.jsx';
 import { WhatsAppGlyph } from '../components/WhatsAppFloat.jsx';
@@ -64,35 +64,6 @@ export default function Contact() {
             <span><Icon name="clock" size={16} /> Replies within 1 business day</span>
             <span><Icon name="check" size={16} /> Monday – Saturday, 10 AM – 8 PM</span>
           </div>
-        </div>
-      </section>
-
-      <section className="contact-quick">
-        <div className="container quick-grid">
-          <a className="quick-card" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-            <span className="quick-icon qi-wa"><WhatsAppGlyph size={24} /></span>
-            <div>
-              <h4>Chat on WhatsApp</h4>
-              <p>{WHATSAPP_DISPLAY}</p>
-              <span className="quick-link">Start a chat <Icon name="arrow" size={15} /></span>
-            </div>
-          </a>
-          <div className="quick-card">
-            <span className="quick-icon qi-time"><Icon name="clock" size={24} /></span>
-            <div>
-              <h4>Business Hours</h4>
-              <p>Monday – Saturday</p>
-              <p className="quick-strong">10:00 AM – 8:00 PM</p>
-            </div>
-          </div>
-          <Link className="quick-card" to="/pricing">
-            <span className="quick-icon qi-price"><Icon name="coin" size={24} /></span>
-            <div>
-              <h4>Plans &amp; Packages</h4>
-              <p>Care plans from Rs. 999/month</p>
-              <span className="quick-link">Compare pricing <Icon name="arrow" size={15} /></span>
-            </div>
-          </Link>
         </div>
       </section>
 
@@ -163,7 +134,6 @@ export default function Contact() {
               <button type="submit" className="btn btn-primary btn-lg btn-block">
                 Send Message <Icon name="send" size={17} />
               </button>
-              <p className="form-note"><Icon name="clock" size={14} /> We typically respond within 1 business day.</p>
             </form>
           </div>
 
@@ -190,16 +160,6 @@ export default function Contact() {
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-wa btn-block">
                 <WhatsAppGlyph size={18} /> {WHATSAPP_DISPLAY}
               </a>
-            </div>
-
-            <div className="social-card">
-              <span>Follow us</span>
-              <div className="social-row">
-                <a href="#" aria-label="Facebook">FB</a>
-                <a href="#" aria-label="Instagram">IG</a>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
-                <a href="#" aria-label="LinkedIn">IN</a>
-              </div>
             </div>
           </aside>
         </div>

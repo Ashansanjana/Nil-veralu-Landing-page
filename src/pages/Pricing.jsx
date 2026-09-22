@@ -13,20 +13,18 @@ export default function Pricing() {
 
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero page-hero-compact">
         <div className="container">
           <div className="launch-offer-badge">Limited-Time Special Offer &mdash; 50% OFF Everything</div>
           <h1>Simple, Transparent Pricing</h1>
           <p>
-            Choose an ongoing monthly care plan for your existing site, or a one-time package to get a
-            brand new website built. All prices in Sri Lankan Rupees (LKR).
+            All prices in LKR. <strong>Build your site for free</strong> with any{' '}
+            <a href="#care-plans">monthly care plan</a>.
           </p>
-          <div className="page-hero-callout">Build Your Site for <span>Free</span></div>
-          <p className="page-hero-callout-note">with any Bronze, Silver or Gold monthly care plan</p>
         </div>
       </section>
 
-      <section id="build-packages">
+      <section id="build-packages" className="pricing-section">
         <div className="container">
           <div className="divider-heading">
             <h2>One-Time Website Build Packages</h2>
@@ -55,7 +53,7 @@ export default function Pricing() {
           ))}
 
           <div className="pricing-note">
-            Website hosting is <strong>not included</strong> in build packages by default. Add standalone
+            Each page averages about 2 scroll lengths. Website hosting is <strong>not included</strong> in build packages by default. Add standalone
             hosting for Rs. 499/month, or pay a one-off Rs. 2,999 setup fee for free hosting forever, or
             upgrade to a Bronze, Silver or Gold monthly care plan for hosting plus ongoing maintenance and updates.
           </div>

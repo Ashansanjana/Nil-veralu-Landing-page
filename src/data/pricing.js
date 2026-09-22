@@ -11,7 +11,7 @@ export const buildPackages = [
     original: 'Rs. 9,998',
     price: '4,999',
     features: [
-      '4 custom-designed pages (e.g. Home, About, Services, Contact) — avg. 2 scroll lengths per page',
+      '4 custom-designed pages (e.g. Home, About, Services, Contact)',
       'Mobile responsive design',
       'Contact form included',
       'Basic on-page SEO setup',
@@ -31,7 +31,7 @@ export const buildPackages = [
     badge: 'Best Value',
     features: [
       'Everything in the 4 Page package',
-      '6 custom-designed pages — avg. 2 scroll lengths per page',
+      '6 custom-designed pages',
       'Social media integration',
       '3 rounds of revisions',
     ],
@@ -47,7 +47,7 @@ export const buildPackages = [
     price: '8,999',
     features: [
       'Everything in the 6 Page package',
-      '8 custom-designed pages — avg. 2 scroll lengths per page',
+      '8 custom-designed pages',
       'Basic analytics setup',
       '4 rounds of revisions',
     ],
@@ -66,7 +66,7 @@ export const carePlans = [
     original: 'Rs. 1,998',
     price: '999',
     features: [
-      '4 page website free (avg. 2 scroll lengths per page)',
+      '4 page website free',
       'Website hosting support & monitoring',
       '1 content update per month',
       'Basic security monitoring',
@@ -87,7 +87,7 @@ export const carePlans = [
     featured: true,
     badge: 'Most Popular',
     features: [
-      '6 page website free (avg. 2 scroll lengths per page)',
+      '6 page website free',
       'Everything in Bronze, plus:',
       '2 content updates per month',
       'Monthly performance report',
@@ -106,7 +106,7 @@ export const carePlans = [
     original: 'Rs. 5,998',
     price: '2,999',
     features: [
-      '8 page website free (avg. 2 scroll lengths per page)',
+      '8 page website free',
       'Everything in Silver, plus:',
       '3 content updates per month',
       'Weekly automated backups',
