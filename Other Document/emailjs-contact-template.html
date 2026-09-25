@@ -1,0 +1,65 @@
+<!--
+  EmailJS template: "Contact Form" (paste into Email Templates -> Content -> Edit Content -> Code editor)
+
+  Settings for the template:
+    Subject:     New website inquiry from {{from_name}}
+    To Email:    damitha.fe1@gmail.com
+    From Name:   Nil Veralu Website
+    Reply To:    {{reply_to}}
+
+  Variables sent from src/pages/Contact.jsx:
+    {{from_name}} {{from_email}} {{reply_to}} {{phone}} {{interest}} {{message}} {{sent_at}}
+-->
+<div style="margin:0;padding:24px 12px;background:#eef2f7;font-family:Arial,Helvetica,sans-serif;color:#0f172a;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #d9e0ea;">
+    <tr>
+      <td style="background:#0b1220;padding:24px 28px;">
+        <div style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#34d399;font-weight:bold;">Nil Veralu Web Design</div>
+        <div style="font-size:22px;font-weight:bold;color:#ffffff;margin-top:6px;">New Website Inquiry</div>
+        <div style="font-size:13px;color:#94a3b8;margin-top:4px;">Received {{sent_at}}</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:24px 28px 8px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:15px;">
+          <tr>
+            <td style="padding:10px 0;border-bottom:1px solid #eef2f7;color:#475569;width:140px;">Name</td>
+            <td style="padding:10px 0;border-bottom:1px solid #eef2f7;font-weight:bold;">{{from_name}}</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 0;border-bottom:1px solid #eef2f7;color:#475569;">Email</td>
+            <td style="padding:10px 0;border-bottom:1px solid #eef2f7;"><a href="mailto:{{from_email}}" style="color:#2563eb;">{{from_email}}</a></td>
+          </tr>
+          <tr>
+            <td style="padding:10px 0;border-bottom:1px solid #eef2f7;color:#475569;">Phone</td>
+            <td style="padding:10px 0;border-bottom:1px solid #eef2f7;">{{phone}}</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 0;color:#475569;">Interested in</td>
+            <td style="padding:10px 0;"><span style="display:inline-block;padding:4px 10px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-weight:bold;font-size:13px;">{{interest}}</span></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:8px 28px 24px;">
+        <div style="font-size:13px;color:#475569;margin-bottom:8px;">Message</div>
+        <div style="padding:16px 18px;background:#f8fafc;border-left:4px solid #2563eb;border-radius:6px;font-size:15px;line-height:1.6;white-space:pre-wrap;">{{message}}</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:0 28px 28px;">
+        <a href="mailto:{{reply_to}}?subject=Re:%20Your%20website%20inquiry" style="display:inline-block;padding:12px 22px;background:#2563eb;color:#ffffff;text-decoration:none;border-radius:8px;font-weight:bold;font-size:14px;">Reply to {{from_name}}</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:16px 28px;background:#f8fafc;border-top:1px solid #d9e0ea;font-size:12px;color:#94a3b8;">
+        Sent from the contact form on the Nil Veralu Web Design website.
+      </td>
+    </tr>
+  </table>
+</div>

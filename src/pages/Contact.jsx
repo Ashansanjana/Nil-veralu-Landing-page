@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import usePageMeta from '../components/usePageMeta.js';
 import Icon from '../components/Icon.jsx';
 import { WhatsAppGlyph } from '../components/WhatsAppFloat.jsx';
@@ -7,6 +8,11 @@ import { CONTACT_EMAIL, WHATSAPP_URL, WHATSAPP_DISPLAY } from '../data/site.js';
 import { carePlans, buildPackages, interestByKey } from '../data/pricing.js';
 
 const emptyForm = { name: '', phone: '', email: '', interest: '', message: '' };
+
+// EmailJS IDs come from .env (see .env.example)
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const nextSteps = [
   { title: 'Send us your details', text: 'Tell us about your business and what you need.' },
@@ -25,29 +31,36 @@ export default function Contact() {
   const preselected = interestByKey[params.get('plan') || params.get('package')] || '';
 
   const [form, setForm] = useState({ ...emptyForm, interest: preselected });
-  const [submitted, setSubmitted] = useState(false);
+  // idle | sending | sent | error
+  const [status, setStatus] = useState('idle');
 
   const update = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  // Front-end only — opens a pre-filled email
-  const handleSubmit = (e) => {
+  // Keys must match the {{variables}} used in the EmailJS template
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const name = form.name.trim();
-    const body = [
-      `Name: ${name}`,
-      `Email: ${form.email.trim()}`,
-      `Phone: ${form.phone.trim() || 'N/A'}`,
-      `Interested in: ${form.interest || 'N/A'}`,
-      '',
-      form.message.trim(),
-    ].join('\n');
+    setStatus('sending');
 
-    setSubmitted(true);
-    window.location.href =
-      `mailto:${CONTACT_EMAIL}` +
-      `?subject=${encodeURIComponent(`Website Inquiry from ${name}`)}` +
-      `&body=${encodeURIComponent(body)}`;
-    setForm(emptyForm);
+    const templateParams = {
+      from_name: form.name.trim(),
+      from_email: form.email.trim(),
+      reply_to: form.email.trim(),
+      phone: form.phone.trim() || 'N/A',
+      interest: form.interest || 'N/A',
+      message: form.message.trim(),
+      sent_at: new Date().toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' }),
+    };
+
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      });
+      setStatus('sent');
+      setForm(emptyForm);
+    } catch (err) {
+      console.error('EmailJS send failed:', err);
+      setStatus('error');
+    }
   };
 
   return (
@@ -78,9 +91,14 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className={`form-success${submitted ? ' visible' : ''}`}>
+            <div className={`form-success${status === 'sent' ? ' visible' : ''}`} role="status">
               <Icon name="check" size={18} />
-              Thank you! Your message has been prepared. We'll get back to you shortly.
+              Thank you! Your message has been sent. We'll get back to you shortly.
+            </div>
+
+            <div className={`form-error${status === 'error' ? ' visible' : ''}`} role="alert">
+              Sorry, your message couldn't be sent. Please try again, or email us at{' '}
+              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
             </div>
 
             <form onSubmit={handleSubmit}>
@@ -131,8 +149,9 @@ export default function Contact() {
                   value={form.message} onChange={update}></textarea>
               </div>
 
-              <button type="submit" className="btn btn-primary btn-lg btn-block">
-                Send Message <Icon name="send" size={17} />
+              <button type="submit" className="btn btn-primary btn-lg btn-block"
+                disabled={status === 'sending'}>
+                {status === 'sending' ? 'Sending…' : <>Send Message <Icon name="send" size={17} /></>}
               </button>
             </form>
           </div>
