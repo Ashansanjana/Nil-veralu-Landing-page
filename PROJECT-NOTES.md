@@ -7,7 +7,7 @@ Reference notes for this site's business details, so pricing/contact info stays 
 - **Name:** Nil Veralu Web Design
 - **Domain (canonical):** `nilveralu.com` (no `www`)
 - **Logo file:** `assets/logo.svg`
-- **WhatsApp Business number:** +94 76 238 9579 (`https://wa.me/94762389579`)
+- **WhatsApp Business number:** +94 76 896 0677 (`https://wa.me/94768960677`)
 - **Contact form delivers to:** damitha.fe1@gmail.com (set in `js/script.js`)
 - **Business hours:** Monday – Saturday, 10:00 AM – 8:00 PM
 
